@@ -1,0 +1,84 @@
+/* Browser-Specific CSS Fixes */
+
+/* Chrome/Safari specific */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #colorPicker {
+        padding: 0;
+    }
+    
+    .tool-btn {
+        -webkit-appearance: none;
+    }
+}
+
+/* Firefox specific */
+@-moz-document url-prefix() {
+    .color-option {
+        border: 2px solid #dee2e6;
+    }
+    
+    #brushSize {
+        background: transparent;
+    }
+}
+
+/* Edge specific */
+@supports (-ms-ime-align:auto) {
+    .canvas-wrapper {
+        border: 2px solid #2e4a76;
+    }
+    
+    .action-btn {
+        min-height: 50px;
+    }
+}
+
+/* Safari specific */
+_::-webkit-full-page-media, _:future, :root .safari-specific {
+    .header {
+        background: linear-gradient(90deg, #3a5a8c, #2a3a66);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .tool-btn, .action-btn {
+        min-height: 44px; /* Minimum touch target size */
+        padding: 12px 20px;
+    }
+    
+    .color-option {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .canvas-overlay {
+        font-size: 1.4rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tool-btn.active {
+        outline: 3px solid #000;
+    }
+    
+    .color-option {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .tool-btn:hover,
+    .action-btn:hover,
+    .browser-icon:hover {
+        transform: none;
+    }
+}
