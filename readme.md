@@ -50,7 +50,7 @@ cross-browser-canvas-editor/
 ### Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cross-browser-canvas-editor.git
+   git clone https://github.com/mah-noor-dev/cross-browser-canvas-editor.git
 Open index.html in any browser
 
 No build process required!
